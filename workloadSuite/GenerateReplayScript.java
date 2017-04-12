@@ -192,7 +192,7 @@ public class GenerateReplayScript {
 
                 FileWriter runFile = new FileWriter(scriptDirPath + "/run-job-" + i + ".sh");
                 runFile.write(toWrite.toCharArray(), 0, toWrite.length());
-                toWrite = "" + hadoopCommand + "fs -rm -r " + outputPath + "\n";
+                toWrite = "" + hadoopCommand + " fs -rm -r " + outputPath + "\n";
                 runFile.write(toWrite.toCharArray(), 0, toWrite.length());
                 toWrite = "# inputSize " + input + "\n";
                 runFile.write(toWrite.toCharArray(), 0, toWrite.length());
